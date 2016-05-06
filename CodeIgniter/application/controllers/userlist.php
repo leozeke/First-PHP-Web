@@ -12,8 +12,7 @@ class Userlist extends CI_Controller {
                 // We can load some helper (remember to not put the sufix _helper! )
                 $this->load->helper('ejemplo');
                 $this->load->helper('form');
-
-         		$this->load->model('Model_List');       
+ 		$this->load->model('Model_List');       
         }
 
     public function index(){
@@ -22,9 +21,9 @@ class Userlist extends CI_Controller {
         $hdata['titulo'] = "Principal";
 
         // Get data from model!
-		$data['query'] = $this->Model_List->get_user_list();
+	$data['query'] = $this->Model_List->get_user_list();
 
-		$this->load->view('layout/Header', $hdata);
+	$this->load->view('layout/Header', $hdata);
     	$this->load->view('userlist/index', $data);
     	$this->load->view('layout/Footer');
     }
@@ -34,7 +33,7 @@ class Userlist extends CI_Controller {
 
     	$hdata['titulo'] = "Agregar User";
 
-		$this->load->view('layout/Header', $hdata);
+	$this->load->view('layout/Header', $hdata);
     	$this->load->view('userlist/add');
     	$this->load->view('layout/Footer');
 
@@ -66,7 +65,7 @@ class Userlist extends CI_Controller {
 
 
     		$hdata['titulo'] = "Agregar User";
-			$this->load->view('layout/Header', $hdata);
+		$this->load->view('layout/Header', $hdata);
     		$this->load->view('userlist/update',$data);
     		$this->load->view('layout/Footer');
 		} else {
